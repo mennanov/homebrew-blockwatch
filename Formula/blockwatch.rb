@@ -1,25 +1,25 @@
 class Blockwatch < Formula
   desc "Language agnostic linter that keeps your code and documentation in sync and valid"
   homepage "https://github.com/mennanov/blockwatch"
-  version "0.3.10"
+  version "0.3.11"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/mennanov/blockwatch/releases/download/v0.3.10/blockwatch-aarch64-apple-darwin.tar.xz"
-      sha256 "802957859aef29898a7bd0a328e0101e6c7b7a50aa7ae7f56ad13d1abfe41de7"
+      url "https://github.com/mennanov/blockwatch/releases/download/v0.3.11/blockwatch-aarch64-apple-darwin.tar.xz"
+      sha256 "b848a37bfc55dd48749f97a75e13840b85a2995e4f0f160a3818574db32016d2"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/mennanov/blockwatch/releases/download/v0.3.10/blockwatch-x86_64-apple-darwin.tar.xz"
-      sha256 "9474edeaf50958a2369a7e46d72bbc47f826f5944ba364307fa516238eccbdf0"
+      url "https://github.com/mennanov/blockwatch/releases/download/v0.3.11/blockwatch-x86_64-apple-darwin.tar.xz"
+      sha256 "2734cce5fe8e3421a89dd4285e38e8b9fed959f9eeace974bf5944f0bedaafc6"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/mennanov/blockwatch/releases/download/v0.3.10/blockwatch-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "701f845f67ac98e528b51fc6fa9373f888182394d91ce382498791b0a9134076"
+      url "https://github.com/mennanov/blockwatch/releases/download/v0.3.11/blockwatch-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "9192ed6e7a0b16f4beee0bfdf837e56ec42495ace9bbde719561880bdd46ce81"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/mennanov/blockwatch/releases/download/v0.3.10/blockwatch-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "e15288b57194c032e2064d37da59bb1b1e3d7f7c6befdeefc4f604c9893cccf7"
+      url "https://github.com/mennanov/blockwatch/releases/download/v0.3.11/blockwatch-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "f59b89daa843ac1f0e60e0693b5599fef97439892ce2f64cc8759212e37794a6"
     end
   end
   license "MIT"
@@ -48,10 +48,18 @@ class Blockwatch < Formula
   end
 
   def install
-    bin.install "blockwatch" if OS.mac? && Hardware::CPU.arm?
-    bin.install "blockwatch" if OS.mac? && Hardware::CPU.intel?
-    bin.install "blockwatch" if OS.linux? && Hardware::CPU.arm?
-    bin.install "blockwatch" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "blockwatch"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "blockwatch"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "blockwatch"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "blockwatch"
+    end
 
     install_binary_aliases!
 
