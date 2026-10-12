@@ -1,25 +1,25 @@
 class Blockwatch < Formula
   desc "Language agnostic linter that keeps your code and documentation in sync and valid"
   homepage "https://github.com/mennanov/blockwatch"
-  version "0.10.1"
+  version "0.10.2"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/mennanov/blockwatch/releases/download/v0.10.1/blockwatch-aarch64-apple-darwin.tar.xz"
-      sha256 "65157e04a6b63a8463f0d70f3fa6bdce1c9dac5ae68005811181f0139b969668"
+      url "https://github.com/mennanov/blockwatch/releases/download/v0.10.2/blockwatch-aarch64-apple-darwin.tar.xz"
+      sha256 "72db8f3074e29096f94795ad27c520ff5a57c0dd3e28b456fa1466549c9e4a2f"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/mennanov/blockwatch/releases/download/v0.10.1/blockwatch-x86_64-apple-darwin.tar.xz"
-      sha256 "941a77c99f9d505980bfcd552f81e89325b359fdb836a67e7ebc77c5f5d15609"
+      url "https://github.com/mennanov/blockwatch/releases/download/v0.10.2/blockwatch-x86_64-apple-darwin.tar.xz"
+      sha256 "8a7fb06932742c5c329eabbcc49fb273d49476002d4e31ab5e054a0e92d01d26"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/mennanov/blockwatch/releases/download/v0.10.1/blockwatch-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "236dc617de077e84bb2ed95c1565034711b8240d20b94ef905e298d8369e8fb2"
+      url "https://github.com/mennanov/blockwatch/releases/download/v0.10.2/blockwatch-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "cc84e5738c9358e8e287b6c9a6dfecb19b80a6a5920661f94789ba5262bc957d"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/mennanov/blockwatch/releases/download/v0.10.1/blockwatch-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "4bf5149787c6053ef9c9a8f624e7598776424bfcb787d539c7057b1dcc2bf420"
+      url "https://github.com/mennanov/blockwatch/releases/download/v0.10.2/blockwatch-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "7a9ed28357c1416e5f314c1813590cc2a2743cec594335fd2cc437dd9be62a01"
     end
   end
   license "MIT"
