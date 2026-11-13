@@ -1,25 +1,25 @@
 class Blockwatch < Formula
   desc "Language agnostic linter that keeps your code and documentation in sync and valid"
-  homepage "https://github.com/mennanov/blockwatch"
-  version "0.18.1"
+  homepage "https://blockwatch.sh"
+  version "0.19.1"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/mennanov/blockwatch/releases/download/v0.18.1/blockwatch-aarch64-apple-darwin.tar.xz"
-      sha256 "3557b33c275408c9ec89d39943d51ce24dcb7dc4dce706f9626dec73acbcbeed"
+      url "https://github.com/mennanov/blockwatch/releases/download/v0.19.1/blockwatch-aarch64-apple-darwin.tar.xz"
+      sha256 "9e1b0542d6031cdbe198ef16897221a3eb72b20e578ff5322fa1db341a28f63e"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/mennanov/blockwatch/releases/download/v0.18.1/blockwatch-x86_64-apple-darwin.tar.xz"
-      sha256 "7b331118bd66695027da81cf27ecb89be6fb9457e34efc0ad4112d049085e6ac"
+      url "https://github.com/mennanov/blockwatch/releases/download/v0.19.1/blockwatch-x86_64-apple-darwin.tar.xz"
+      sha256 "752250440bcb79587656d39c7038502bcaf7318db63021dcbd3899bf427ccda2"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/mennanov/blockwatch/releases/download/v0.18.1/blockwatch-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "51e3b881649de0a6d01bfafbb1792d768944abac048b7c70b350c1c19a3c6fee"
+      url "https://github.com/mennanov/blockwatch/releases/download/v0.19.1/blockwatch-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "d7b43091f4995297bc8c82cd0148b73734c14afafbebe5d32d33f3945b0cb0f2"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/mennanov/blockwatch/releases/download/v0.18.1/blockwatch-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "128b95fda6208af7de875f122f2ce1dcfc2ade82226c6f4d2f404dff8a240b2a"
+      url "https://github.com/mennanov/blockwatch/releases/download/v0.19.1/blockwatch-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "78e0023404c0edeb7b39f7071e07fb504327b55f9f2d486d7f4494804e13565a"
     end
   end
   license "MIT"
